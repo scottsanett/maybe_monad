@@ -7,7 +7,6 @@ class Maybe {
 private:
     T m_value;
     bool m_valid;
-
 public:
     using type = T;
     Maybe(T t): m_value(t), m_valid(true) {}
@@ -37,3 +36,5 @@ Maybe<T> operator >>= (Maybe<T> m, Callable f) {
     }
 }
 
+template <typename T>
+inline static Maybe<T> Nothing = Maybe<T>{};
