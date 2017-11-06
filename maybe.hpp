@@ -3,7 +3,7 @@
 #include <iostream>
 
 template <typename T>
-struct Maybe {
+class Maybe {
 private:
     T m_value;
     bool m_valid;
