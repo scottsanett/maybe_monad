@@ -2,13 +2,8 @@
 #include <variant>
 #include <iostream>
 
-template <typename T> struct Maybe;
-
 template <typename T>
 struct Maybe {
-    template <typename D, typename Callable>
-    friend Maybe<D> operator >>= (Maybe<D>, Callable);
-
 private:
     T m_value;
     bool m_valid;
